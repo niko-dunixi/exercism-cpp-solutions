@@ -1,5 +1,6 @@
 
-#include <utility>
+#include<string>
+#include<utility>
 
 namespace queen_attack {
 
@@ -12,6 +13,9 @@ namespace queen_attack {
         std::pair<int, int> white() const;
 
         std::pair<int, int> black() const;
+
+        // https://stackoverflow.com/a/20157061/1478636
+        operator std::string &() const;
 
     private:
         std::pair<int, int> m_white;

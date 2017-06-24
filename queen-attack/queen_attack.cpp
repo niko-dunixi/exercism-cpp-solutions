@@ -51,6 +51,18 @@ namespace queen_attack {
         if (white().first == black().first || white().second == black().second) {
             return true;
         }
+        for (int x_prime(white().first - 1), y_prime(white().second - 1);
+             x_prime >= 0 && y_prime >= 0; --x_prime, --y_prime) {
+            if (black().first == x_prime && black().second == y_prime) {
+                return true;
+            }
+        }
+        for (int x_prime(white().first + 1), y_prime(white().second + 1);
+             x_prime <= 8 && y_prime <= 8; ++x_prime, ++y_prime) {
+            if (black().first == x_prime && black().second == y_prime) {
+                return true;
+            }
+        }
         return false;
     }
 

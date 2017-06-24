@@ -33,7 +33,6 @@ BOOST_AUTO_TEST_CASE(keeps_the_digit_order_if_reversed)
     BOOST_TEST(expected == actual, tt::per_element());
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(keeps_arbitrary_digit_order)
 {
     const vector<int> expected{9, 3, 6, 9, 2, 3, 4, 6, 8};
@@ -43,6 +42,7 @@ BOOST_AUTO_TEST_CASE(keeps_arbitrary_digit_order)
     BOOST_TEST(expected == actual, tt::per_element());
 }
 
+#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(can_slice_by_1)
 {
     const vector<vector<int>> expected{{0}, {1}, {2}, {3}, {4}};

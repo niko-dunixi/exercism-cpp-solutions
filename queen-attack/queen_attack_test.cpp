@@ -95,11 +95,11 @@ BOOST_AUTO_TEST_CASE(queens_can_attack_on_the_nw_so_diagonal)
     BOOST_REQUIRE(board.can_attack());
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(queens_cannot_attack_if_not_on_same_row_column_or_diagonal)
 {
     const queen_attack::chess_board board{std::make_pair(1, 1), std::make_pair(3, 7)};
 
     BOOST_REQUIRE(!board.can_attack());
 }
+#if defined(EXERCISM_RUN_ALL_TESTS)
 #endif

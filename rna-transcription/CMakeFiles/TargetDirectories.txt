@@ -1,0 +1,3 @@
+/Users/paulbaker/exercism/cpp/rna-transcription/CMakeFiles/edit_cache.dir
+/Users/paulbaker/exercism/cpp/rna-transcription/CMakeFiles/rebuild_cache.dir
+/Users/paulbaker/exercism/cpp/rna-transcription/CMakeFiles/rna-transcription.dir

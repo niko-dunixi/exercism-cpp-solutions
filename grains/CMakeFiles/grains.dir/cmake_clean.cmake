@@ -1,0 +1,11 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/grains.dir/grains_test.cpp.o"
+  "CMakeFiles/grains.dir/grains.cpp.o"
+  "grains.pdb"
+  "grains"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/grains.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

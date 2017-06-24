@@ -1,0 +1,3 @@
+/Users/paulbaker/exercism/cpp/grains/CMakeFiles/edit_cache.dir
+/Users/paulbaker/exercism/cpp/grains/CMakeFiles/rebuild_cache.dir
+/Users/paulbaker/exercism/cpp/grains/CMakeFiles/grains.dir

@@ -12,7 +12,9 @@
 
 namespace series {
 
-    std::vector<int> digits(std::string input);
+    std::vector<int> digits(std::string);
+
+    std::vector<std::vector<int>> slice(std::string, int);
 
 };
 

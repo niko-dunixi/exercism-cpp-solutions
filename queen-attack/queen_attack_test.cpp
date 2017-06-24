@@ -46,7 +46,6 @@ BOOST_AUTO_TEST_CASE(string_representation)
     BOOST_REQUIRE_EQUAL(expected, static_cast<std::string>(board));
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(queens_cannot_attack)
 {
     const queen_attack::chess_board board{std::make_pair(2, 3), std::make_pair(4, 7)};
@@ -54,6 +53,7 @@ BOOST_AUTO_TEST_CASE(queens_cannot_attack)
     BOOST_REQUIRE(!board.can_attack());
 }
 
+#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(queens_can_attack_when_they_are_on_the_same_row)
 {
     const queen_attack::chess_board board{std::make_pair(2, 4), std::make_pair(2, 7)};

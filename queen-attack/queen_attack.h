@@ -17,6 +17,8 @@ namespace queen_attack {
         // https://stackoverflow.com/a/20157061/1478636
         operator std::string &() const;
 
+        bool can_attack() const;
+
     private:
         std::pair<int, int> m_white;
         std::pair<int, int> m_black;

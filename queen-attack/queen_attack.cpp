@@ -47,4 +47,11 @@ namespace queen_attack {
         return *result;
     }
 
+    bool chess_board::can_attack() const {
+        if (white().first == black().first || white().second == black().second) {
+            return true;
+        }
+        return false;
+    }
+
 }

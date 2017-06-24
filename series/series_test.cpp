@@ -87,7 +87,6 @@ BOOST_AUTO_TEST_CASE(can_slice_by_4)
     BOOST_TEST(expected == actual);
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(can_slice_by_5)
 {
     const vector<vector<int>> expected{{8, 1, 2, 2, 8}};
@@ -97,6 +96,7 @@ BOOST_AUTO_TEST_CASE(can_slice_by_5)
     BOOST_TEST(expected == actual);
 }
 
+#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(domain_error_if_not_enough_digits_to_slice)
 {
     BOOST_REQUIRE_THROW(series::slice("01032987583", 12), domain_error);

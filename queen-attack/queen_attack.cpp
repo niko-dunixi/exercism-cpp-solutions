@@ -2,6 +2,7 @@
 // Created by Paul Baker on 6/24/17.
 //
 
+#include<iterator>
 #include<utility>
 #include<stdexcept>
 #include<string>
@@ -32,18 +33,18 @@ namespace queen_attack {
 
     // https://stackoverflow.com/a/20157061/1478636
     chess_board::operator std::string &() const {
-        std::string *result = new std::string;
-        std::string &board = *result;
-        for (int i(0); i < 8; ++i) {
-            std::string current = "_ _ _ _ _ _ _ _\n";
-            if (i == white().first) {
-                current[white().second * 2] = 'W';
-            }
-            if (i == black().first) {
-                current[black().second * 2] = 'B';
-            }
-            board += current;
-        }
+        std::string *result = new std::string{
+                "_ _ _ _ _ _ _ _\n"
+                        "_ _ _ _ _ _ _ _\n"
+                        "_ _ _ _ _ _ _ _\n"
+                        "_ _ _ _ _ _ _ _\n"
+                        "_ _ _ _ _ _ _ _\n"
+                        "_ _ _ _ _ _ _ _\n"
+                        "_ _ _ _ _ _ _ _\n"
+                        "_ _ _ _ _ _ _ _\n"};
+        // https://stackoverflow.com/a/2151141/1478636
+        (*result)[16 * white().first + 2 * white().second] = 'W';
+        (*result)[16 * black().first + 2 * black().second] = 'B';
         return *result;
     }
 

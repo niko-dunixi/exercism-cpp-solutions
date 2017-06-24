@@ -51,6 +51,15 @@ namespace queen_attack {
         if (white().first == black().first || white().second == black().second) {
             return true;
         }
+        //const double pi = 4 * atan(1);
+        //
+        //int dot_product = white().first * black().first + white().second * black().second;
+        //double white_magnitude = std::sqrt(std::pow(white().first, 2) + std::pow(white().second, 2));
+        //double black_magnitude = std::sqrt(std::pow(black().first, 2) + std::pow(black().second, 2));
+        //double radians_between_vectors = std::acos(dot_product / (white_magnitude * black_magnitude));
+        //
+        //double degrees_between_vectors = radians_between_vectors * 180 / pi;
+        //return static_cast<int>(degrees_between_vectors) % 45 == 0;
         for (int x_prime(white().first - 1), y_prime(white().second - 1);
              x_prime >= 0 && y_prime >= 0; --x_prime, --y_prime) {
             if (black().first == x_prime && black().second == y_prime) {

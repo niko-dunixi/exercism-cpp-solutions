@@ -11,6 +11,10 @@ namespace queen_attack {
 
     }
 
+    chess_board::chess_board(std::pair<int, int> white, std::pair<int, int> black) : m_white(white), m_black(black) {
+
+    }
+
     std::pair<int, int> chess_board::white() const {
         return m_white;
     }

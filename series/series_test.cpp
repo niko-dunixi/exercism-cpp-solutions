@@ -60,7 +60,6 @@ BOOST_AUTO_TEST_CASE(can_slice_by_2)
     BOOST_TEST(expected == actual);
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(can_slice_by_3)
 {
     const vector<vector<int>> expected{{0, 1, 2}, {1, 2, 3}, {2, 3, 4}};
@@ -70,6 +69,7 @@ BOOST_AUTO_TEST_CASE(can_slice_by_3)
     BOOST_TEST(expected == actual);
 }
 
+#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(can_slice_by_3_with_duplicate_digits)
 {
     const vector<vector<int>> expected{{3, 1, 0}, {1, 0, 0}, {0, 0, 1}};

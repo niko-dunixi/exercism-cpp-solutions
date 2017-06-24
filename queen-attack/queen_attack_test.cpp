@@ -74,7 +74,6 @@ BOOST_AUTO_TEST_CASE(queens_can_attack_diagonally)
     BOOST_REQUIRE(board.can_attack());
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(queens_can_attack_another_diagonally)
 {
     const queen_attack::chess_board board{std::make_pair(0, 6), std::make_pair(1, 7)};
@@ -82,6 +81,7 @@ BOOST_AUTO_TEST_CASE(queens_can_attack_another_diagonally)
     BOOST_REQUIRE(board.can_attack());
 }
 
+#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(queens_can_attack_yet_another_diagonally)
 {
     const queen_attack::chess_board board{std::make_pair(4, 1), std::make_pair(6, 3)};

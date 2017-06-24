@@ -1,4 +1,7 @@
-.idea/*
+*/.idea/*
+
+# compiled files
+queen-attack
 
 # Created by https://www.gitignore.io/api/qt,osx,vim,c++,cmake,linux,windows,qtcreator
 

@@ -7,6 +7,8 @@ namespace queen_attack {
     public:
         chess_board();
 
+        chess_board(std::pair<int, int>, std::pair<int, int>);
+
         std::pair<int, int> white() const;
 
         std::pair<int, int> black() const;

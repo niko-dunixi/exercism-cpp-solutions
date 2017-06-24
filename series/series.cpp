@@ -23,7 +23,7 @@ namespace series {
         for (auto i(0); i < (parsed_digits.size() - size + 1); ++i) {
             auto begin = std::begin(parsed_digits) + i;
             auto end = std::begin(parsed_digits) + (i + size);
-            results.emplace_back(std::vector<int>(begin, end));
+            results.emplace_back(begin, end);
         }
         return results;
     }

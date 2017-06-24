@@ -1,4 +1,8 @@
 
+#ifndef QUEEN_ATTACK
+#define QUEEN_ATTACK
+
+
 #include<string>
 #include<utility>
 
@@ -25,3 +29,5 @@ namespace queen_attack {
     };
 
 }
+
+#endif

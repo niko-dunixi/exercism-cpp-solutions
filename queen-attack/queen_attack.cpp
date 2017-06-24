@@ -32,8 +32,8 @@ namespace queen_attack {
     }
 
     // https://stackoverflow.com/a/20157061/1478636
-    chess_board::operator std::string &() const {
-        std::string *result = new std::string{
+    chess_board::operator std::string() const {
+        std::string result{
                 "_ _ _ _ _ _ _ _\n"
                         "_ _ _ _ _ _ _ _\n"
                         "_ _ _ _ _ _ _ _\n"
@@ -43,9 +43,9 @@ namespace queen_attack {
                         "_ _ _ _ _ _ _ _\n"
                         "_ _ _ _ _ _ _ _\n"};
         // https://stackoverflow.com/a/2151141/1478636
-        (*result)[16 * white().first + 2 * white().second] = 'W';
-        (*result)[16 * black().first + 2 * black().second] = 'B';
-        return *result;
+        result[16 * white().first + 2 * white().second] = 'W';
+        result[16 * black().first + 2 * black().second] = 'B';
+        return result;
     }
 
     bool chess_board::can_attack() const {

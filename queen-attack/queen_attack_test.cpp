@@ -30,7 +30,6 @@ BOOST_AUTO_TEST_CASE(queen_positions_must_be_distinct)
     BOOST_REQUIRE_THROW((queen_attack::chess_board{pos, pos}), std::domain_error);
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(string_representation)
 {
     const queen_attack::chess_board board{std::make_pair(2, 4), std::make_pair(6, 6)};
@@ -47,6 +46,7 @@ BOOST_AUTO_TEST_CASE(string_representation)
     BOOST_REQUIRE_EQUAL(expected, static_cast<std::string>(board));
 }
 
+#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(queens_cannot_attack)
 {
     const queen_attack::chess_board board{std::make_pair(2, 3), std::make_pair(4, 7)};

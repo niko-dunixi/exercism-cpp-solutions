@@ -72,6 +72,21 @@ namespace queen_attack {
 
     const double pi = 4 * std::atan(1);
 
+    double calculate_rads_from_origin(std::pair<int, int> a) {
+        int first = a.first;
+        int second = a.second;
+        if (first < second) {
+            first ^= second;
+            second ^= first;
+            first ^= second;
+        }
+        return std::atan(first / second);
+    }
+
+    double calculate_degs_from_origin(std::pair<int, int> a) {
+        return calculate_rads_from_origin(a) / pi * 180;
+    }
+
     double calculate_degs_between_vectors(std::pair<int, int> a, std::pair<int, int> b) {
         double radians_between_vectors = calculate_rads_between_vectors(a, b);
         // The angle between these two vectors is in the range
@@ -92,8 +107,14 @@ namespace queen_attack {
         // horizontally, or vertically connected. All with one mathematical
         // operation.
         //
-        const std::pair<int, int> delta_vector = calculate_delta_vector(white(), black());
-        double angle_between = calculate_degs_between_vectors(white(), delta_vector);
+        const std::pair<int, int> &a = white();
+        const std::pair<int, int> &b = black();
+        std::pair<int, int> delta_vector = calculate_delta_vector(a, b);
+        // Move the delta vector back to the origin so we can perform geometry
+        delta_vector = calculate_delta_vector(delta_vector, a);
+//        double angle_between = calculate_degs_between_vectors(a, delta_vector);
+        double angle_between = calculate_degs_from_origin(delta_vector);
+        angle_between += 360;
         int angle_integer = static_cast<int>(angle_between);
         int angle_modded = angle_integer % 45;
         bool queenCanAttack = angle_modded == 0;
